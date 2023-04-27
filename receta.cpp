@@ -179,3 +179,30 @@ istream& operator >> (istream& is, Receta& r){
 
     return is;
 }
+
+void agregarIngrediente(const Ingrediente& o){
+        int i = 0, pos = 0;
+        int last = ingrediente.getLastPos();
+        bool flag = true;
+
+        if(ingrediente.isEmpty()){
+            do{
+                while(i <= last){
+                    if(cmp(o,ingrediente.retrieve(i)) == 1){
+                        flag = false;
+                    }
+                    else{
+                        pos = 1;
+                        flag = true;
+                        break;
+                    }
+                    i++;
+                }
+
+                if(!flag){
+                    ingrediente.insertData(last, o);
+                }
+                }
+            }
+        }
+    }

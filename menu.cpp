@@ -30,7 +30,8 @@ void Menu::userInterface(ListDoble<Receta> &myListReceta){
         cout <<"5.- Eliminar receta"<<endl;
         cout <<"6.- Eliminar todas las recetas"<<endl;
         cout <<"7.- Ordenar recetas"<<endl;
-        cout <<"6.- Salir"<<endl;
+        
+        cout <<"0.- Salir"<<endl;
         cout <<"Selecciona una opcion: ";
         cin >> o;
         cin.ignore();

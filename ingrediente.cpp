@@ -70,3 +70,4 @@ istream& operator >> (istream& is, Ingrediente& i){
     
     return is;
 }
+
