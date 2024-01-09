@@ -5,7 +5,7 @@
 #include <fstream>
 
 #include "receta.h"
-#include "listdoble.h"
+#include "listDoble.h"
 
 class Menu{
 private:

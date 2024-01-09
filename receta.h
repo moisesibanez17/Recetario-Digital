@@ -37,7 +37,10 @@ public:
     void setProcedimiento(const std::string&);
     void setNombreAutor(const Name&);
 
-    void agregarIngrediene(const Ingrediente&, int cmp(const Ingrediente&, const Ingrediente&));
+    void addIngrediente(const Ingrediente&);
+    void deleteIngrediente(const Ingrediente&);
+    void deleteAllIngrediente();
+    void changeCantidadIngrediente(const Ingrediente&, std::string);
 
     bool operator == (const Receta&) const;
     bool operator != (const Receta&) const;

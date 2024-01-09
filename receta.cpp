@@ -4,7 +4,7 @@ using namespace std;
 
 Receta::Receta() { }
 
-Receta::Receta(const Receta& r) : tipo(r.tipo), receta(r.receta), tiempo(r.tiempo),ingrediente(r.ingrediente),procedimiento(r.procedimiento),nombreautor(r.nombreautor) {}
+Receta::Receta(const Receta& r) : tipo(r.tipo), receta(r.receta), tiempo(r.tiempo), ingrediente(r.ingrediente),procedimiento(r.procedimiento),nombreautor(r.nombreautor) {}
 
 Receta& Receta::operator=(const Receta& r){
     tipo = r.tipo;
@@ -12,7 +12,8 @@ Receta& Receta::operator=(const Receta& r){
     tiempo = r.tiempo;
     ingrediente = r.ingrediente;
     procedimiento = r.procedimiento;
-    nombreautor = r.nombreautor;
+    nombreautor = r.
+    nombreautor;
 
     return *this;
 }
@@ -43,17 +44,18 @@ Name Receta::getNombreAutor() const{
 string Receta::toString() const{
     string result;
 
+    result+= "\n_______________________________________________________________________________________________________________________\n";
     result+= "Clasificacion: ";
     result+= tipo;
     result+= "\n";
     result+= receta;
     result+= "\n";
     result+= tiempo;
-    result+= "min \n\nIngredientes: ";
+    result+= " min \n\nIngredientes:\n";
     result+= ingrediente.toString(); 
     result+= "\nProcedimiento: ";
     result+= procedimiento;
-    result+= "\nHecho por: ";
+    result+= "\n\n\nHecho por: ";
     result+= nombreautor.toString();
 
     return result;
@@ -82,42 +84,7 @@ void Receta::setProcedimiento(const std::string& p){
 void Receta::setNombreAutor(const Name& n){
     nombreautor = n;
 }
-/*
-void Receta::agregarIngrediente(ListSimple<Ingrediente>& ListSimpleaIngredientes) {
-    Ingrediente ingrediente;
-    while (cin >> ingrediente) {
-        ListSimpleaIngredientes.push_back(ingrediente);
-    }
 
-void Receta::cambiarCantidadIngrediente(string nombre, string nuevaCantidad) {
-    int posIngrediente = buscarIngrediente(nombre);
-    if (posIngrediente != -1) {
-        Ingrediente ingrediente = ingredientes.retrieve(posIngrediente);
-        ingrediente.setCantidad(nuevaCantidad);
-        ingredientes.deleteData(posIngrediente);
-        ingredientes.insertData(posIngrediente, ingrediente);
-    }
-}
-
-void Receta::eliminarIngrediente(string nombre) {
-    int posIngrediente = buscarIngrediente(nombre);
-    if (posIngrediente != -1) {
-        ingredientes.deleteData(posIngrediente);
-    }
-}
-
-int Receta::buscarIngrediente(string nombre) {
-    int pos = ingredientes.getFirstPos();
-    while (pos <= ingredientes.getLastPos()) {
-        Ingrediente ingrediente = ingredientes.retrieve(pos);
-        if (ingrediente.getNombre() == nombre) {
-            return pos;
-        }
-        pos = ingredientes.getNextPos(pos);
-    }
-    return -1;
-}
-*/
 bool Receta::operator==(const Receta& r) const {
     return receta == r.receta;
 }
@@ -157,8 +124,8 @@ ostream& operator << (ostream& os, Receta& r){
 istream& operator >> (istream& is, Receta& r){
     Ingrediente auxIngrediente;
     ListSimple<Ingrediente> auxListSimple;
-    std::string auxCantidad;
-    char str;
+    std::string auxCantidad,auxNombre;
+    std::string str;
 
     getline(is, r.tipo);
     getline(is, r.receta);
@@ -166,10 +133,9 @@ istream& operator >> (istream& is, Receta& r){
 
     do{
         is >> auxIngrediente;
-        auxCantidad = auxIngrediente.getCantidad();
-        str = auxCantidad[auxCantidad.size() - 1]; //Obtener el ultimo caracter de auxCantidad
         auxListSimple.insertData(auxListSimple.getLastPos(), auxIngrediente);
-    }while(str != ';');
+        getline(is, str);
+    }while(str == "S");
 
     r.setIngrediente(auxListSimple);
 
@@ -180,29 +146,36 @@ istream& operator >> (istream& is, Receta& r){
     return is;
 }
 
-void agregarIngrediente(const Ingrediente& o){
-        int i = 0, pos = 0;
-        int last = ingrediente.getLastPos();
-        bool flag = true;
+void Receta::addIngrediente(const Ingrediente& i) {
+    ListSimple<Ingrediente>::Position last;
+    last = ingrediente.getLastPos();
+    ingrediente.insertSortedData(last, i);
+}
 
-        if(ingrediente.isEmpty()){
-            do{
-                while(i <= last){
-                    if(cmp(o,ingrediente.retrieve(i)) == 1){
-                        flag = false;
-                    }
-                    else{
-                        pos = 1;
-                        flag = true;
-                        break;
-                    }
-                    i++;
-                }
+void Receta::deleteIngrediente(const Ingrediente& i){
+    ListSimple<Ingrediente>::Position pos;
+    pos = ingrediente.findData(i);
+    ingrediente.deleteData(pos);
+}
 
-                if(!flag){
-                    ingrediente.insertData(last, o);
-                }
-                }
-            }
-        }
-    }
+void Receta::deleteAllIngrediente(){
+    ingrediente.deleteAll();
+}
+
+void Receta::changeCantidadIngrediente(const Ingrediente& i, string nuevaCantidad) {
+    ListSimple<Ingrediente>::Position pos;
+    std::string auxNombre;
+    Ingrediente aux;
+    pos = ingrediente.findData(i);
+    auxNombre = ingrediente.retrieve(pos).getNombre();
+    aux.setCantidad(nuevaCantidad);
+    aux.setNombre(auxNombre);
+    
+    ingrediente.deleteData(pos);
+    ingrediente.insertSortedData(ingrediente.getLastPos(),aux);
+}
+
+
+
+
+

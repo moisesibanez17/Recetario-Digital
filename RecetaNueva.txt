@@ -1,314 +1,160 @@
 Comida
 Pollo al horno
 60
-Pollo
-1
-S
-Patas medianas
-4
-S
-Cebollas medianas
-4
-S
-Aceite de oliva
-Un chorrito
-S
-Sal
-Cucharada
-S
-Pimienta
-Cucharada
-N
+1 - Pollo
+4 - Patas medianas
+4 - Cebollas medianas
+Un chorrito - Aceite de oliva
+Cucharada - Sal
+Cucharada - Pimienta
+
 Comenzamos pelando las patatas. Una vez peladas, las cortamos en rodajas finas, de no mas de 1 centimetro de grosor. Despues, las ponemos como base en una bandeja para horno. Pelamos tambien las cebollas y las cortamos en tiras finas. La ponemos sobre la patata y salpimentamos todo. A continuacion ponemos los muslos encima de las patatas y la cebolla. Le anadimos a todo un vaso de agua y un chorrete de aceite de oliva. Asi quedara mas jugoso mientras se hornea. Nos aseguramos que en el fondo de la fuente, haya siempre humedad. Asi la guarnicion no se va a quemar. Salpimentamos y anadimos un buen pellizco de tomillo seco a cada muslo (o al pollo completo, si has elegido la pieza completa) Metemos el pollo al horno a 220ºC si utilizas muslos. calor arriba y abajo. Dejamos hornear unos 30 minutos, hasta que se dore bien. Si utilizas un pollo entero, horneamos a 190ºC. Cuando este bien dorado, sacamos la bandeja del horno, le damos la vuelta a las piezas. Asi, se cocinara el otro lado. Inmediatamente despues, volvemos a meter la bandeja dentro del horno. Finalmente dejamos cocinar aproximadamente el mismo tiempo, hasta que todo quede bien cocinado.
-Hernandez
-Alfredo
+Hernandez,Alfredo
 Desayuno
 Bizcocho de Leche Esponjoso
 30
-Huevo
-3
-S
-Harina
-250g
-S
-Azucar
-200g
-S
-Levadura
-Cucharada
-S
-Leche
-120ml
-S
-Aceite de girasol
-100ml
-N
+3 - Huevo
+250g - Harina
+200g - Azucar
+Cucharada - Levadura
+120ml - Leche
+100ml - Aceite de girasol
+
 Batimos los huevos con la mitad del azucar. Batimos durante unos minutos, hasta que el huevo este bien oxigenado y haya doblado el tamano Echamos el resto del azucar, la leche, el aceite, la canela y la esencia de vainilla. La leche si esta caliente mejor pero como minimo, que no este fria de la nevera. Asi nos quedara el bizcocho mas esponjoso. Mezclamos hasta que se integre todo bien. Es el turno de los ingredientes mas solidos del bizcocho de leche. Ponemos la harina y la levadura en polvo en un tamiz o un colador y la tamizamos sobre la mezcla. Untamos bien de mantequilla un molde y espolvoreamos despues con harina, para que no se pegue. Metemos aqui la mezcla. En el horno ya precalentado a 180ºC, metemos el molde a la rendija del medio durante unos 40 minutos. El tiempo es orientativo. Una manera fidedigna de saber si esta hecho es pinchando un poco con el tenedor y salga limpio, significara que nuestro bizcocho ya estara listo. Si ves que se hace en menos tiempo, puedes taparlo con papel de aluminio, para que no se queme por fuera pero que termine de cocerse en su interior.
-Herrera
-Alberto
+Herrera,Alberto
 Comida
 Ensalada de quinoa y aguacate
 30
-Quinoa
-150g
-S
-Aguacate
-1
-S
-Pimiento rojo
-1
-S
-Pimiento verde
-1
-S
-Cebolla roja
-1
-S
-Tomate cherry
-10
-S
-Aceitunas negras
-Un punado
-S
-Aceite de oliva
-Un chorrito
-S
-Zumo de limon
-Un chorrito
-S
-Sal
-Cucharadita
-S
-Pimienta negra
-Cucharadita
-N
+150g - Quinoa
+1 - Aguacate
+1 - Pimiento rojo
+1 - Pimiento verde
+1 - Cebolla roja
+10 - Tomate cherry
+Un punado - Aceitunas negras
+Un chorrito - Aceite de oliva
+Un chorrito - Zumo de limon
+Cucharadita - Sal
+Cucharadita - Pimienta negra
+
 Cocemos la quinoa en agua con sal durante unos 15 minutos, hasta que este cocida pero aun tenga algo de mordida. Es importante escurrirla bien despues de cocerla. En una ensaladera grande, mezclamos la quinoa con los pimientos cortados en tiras finas, la cebolla roja cortada en juliana, los tomates cherry cortados por la mitad y las aceitunas negras. Salpimentamos al gusto y anadimos un chorrito de aceite de oliva y otro de zumo de limon. Mezclamos bien y dejamos reposar la ensalada durante unos minutos. Mientras tanto, cortamos el aguacate por la mitad y lo pelamos. Lo cortamos en rodajas finas y lo anadimos a la ensalada justo antes de servirla.
-Hernandez
-Carlos
+Hernandez,Carlos
 Desayuno
 Tostadas francesas con miel y canela
 20
-Pan de molde
-4 rebanadas
-S
-Huevos
-2
-S
-Leche
-60ml
-S
-Canela
-Cucharadita
-S
-Miel
-Al gusto
-S
-Mantequilla
-Para untar
-N
+4 rebanadas - Pan de molde
+2 - Huevos
+60ml - Leche
+Cucharadita - Canela
+Al gusto - Miel
+Para untar - Mantequilla
+
 Batimos los huevos con la leche y la canela en un bol. Ponemos las rebanadas de pan a remojar en la mezcla durante unos minutos. En una sarten, derretimos un poco de mantequilla a fuego medio. Cuando la mantequilla este caliente, ponemos las rebanadas de pan a dorar por ambos lados. Servimos las tostadas francesas con un poco de miel por encima y espolvoreamos un poco mas de canela si lo deseamos.
-Garcia
-Dayana
+Garcia,Dayana
 Cena
 Pasta con salsa de tomate y albahaca
 25
-Pasta corta
-250g
-S
-Tomates maduros
-4
-S
-Ajo
-2 dientes
-S
-Albahaca fresca
-Un ramillete
-S
-Aceite de oliva
-Un chorrito
-S
-Sal
-Cucharadita
-S
-Pimienta negra
-Cucharadita
-S
-Queso parmesano
-Al gusto
-N
+250g - Pasta corta
+4 - Tomates maduros
+2 dientes - Ajo
+Un ramillete - Albahaca fresca
+Un chorrito - Aceite de oliva
+Cucharadita - Sal
+Cucharadita - Pimienta negra
+Al gusto - Queso parmesano
+
 Cocemos la pasta en agua con sal siguiendo las instrucciones del paquete. Mientras tanto, pelamos y picamos los ajos finamente. En una sarten grande, calentamos un chorrito de aceite de oliva y anadimos los ajos. Cuando empiecen a dorarse, anadimos los tomates pelados y troceados. Salpimentamos y dejamos cocinar a fuego medio durante unos 10 minutos, hasta que la salsa de tomate se haya espesado. Picamos la albahaca finamente y la anadimos a la salsa de tomate
-Mejia
-Valery
+Mejia,Valery
 Navideno
 Salmon a la plancha
 30
-Salmon
-Una rojada
-S
-Aceite de oliva
-Cucharada
-S
-Zumo de limon
-Cucharada
-N
+Una rojada - Salmon
+Cucharada - Aceite de oliva
+Cucharada - Zumo de limon
+
 Ponemos a calentar en una plancha a fuego fuerte un chorrito de aceite de oliva. Es necesario echar tan solo un poco de aceite ya que, el salmon es muy graso y se cocinara en sus propios jugos. Salpimentamos el salmon y lo ponemos a cocinar aqui Pasados un par de minutos, le damos la vuelta con una espatula al salmon. Que se cocine el otro lado. La idea es sellar sus dos caras Hecho esto, retiramos el salmon de la plancha y lo dejamos enfriar. Hasta que haya cogido temperatura ambiente. Al menos, 30 minutos. Pasado el tiempo, lo volvemos a meter a la plancha. Esta vez a fuego medio. Con esto, vamos a terminar de cocinarlo. El tiempo exacto, dependera del gusto de cada uno. Asi, si lo quieres poco hecho, con dos minutos por cada cara sera suficiente. Si lo quieres bien hecho, necesitara unos 5 minutos por cada cara. Cuando este cocinado por sus dos caras y un minuto antes de retirarlo, le ponemos el limon por encima. Al ser un pescado graso, el toque acido del limon le va a venir muy bien. Dejamos cocinar un minuto mas Finalmente lo emplatamos y le ponemos sal gorda por encima.
-Vargas
-Raul
+Vargas,Raul
 Cena
 Macarrones con queso
 30
-Macarrones 
-200g
-S
-Aceite
-15ml
-S
-Harina
-30g
-S
-Mantequilla
-15g
-S
-Leche
-500ml
-S
-Queso
-30g
-N
+200g - Macarrones 
+15ml - Aceite
+30g - Harina
+15g - Mantequilla
+500ml - Leche
+30g - Queso
+
 En una sarten amplia ponemos un chorrito de aceite y lo calentamos a fuego suave. Antes de que coja calor, anadimos una nuez de mantequilla. Dejamos que, con la accion del calor, la mantequilla se derrita y se integre con el aceite. Hecho esto, anadimos la harina y removemos para integrarlo con el resto de ingredientes. Dejamos que la harina que se tueste brevemente. Ahora es el turno de agregar la leche y lo vamos a hacer en dos tandas. Primero agregamos 250ml de la leche- mejor si la leche esta caliente- y removemos para que se integre bien con esta mezcla de harina. Despues, anadimos el resto de la leche y volvemos a remover hasta obtener una salsa homogenea. A continuacion, continuamos con la elaboracion de la salsa de queso para nuestros macarrones con queso americanos. Anadimos la cucharadita de ajo en polvo, el queso viejo rallado y el queso cheddar, tambien rallado. Salpimentamos y removemos -mientras mantenemos el fuego suave- hasta integrar estos nuevos ingredientes. Dejamos cocinar durante unos 10 minutos. Mientras tanto vamos a preparar la pasta de nuestros macarrones con queso. En una cazuela amplia con abundante agua hirviendo, ponemos un punado de sal y agregamos los macarrones. Removemos para que la pasta no se pegue en el fondo de la cazuela y dejamos que se cocine durante unos 7 minutos, removiendo con cierta frecuencia. Antes de que la pasta este al dente, reservamos un poco del agua de la coccion y el resto lo escurrimos de la pasta. Cuando la salsa bechamel con queso este lista, agregamos los macarrones y el agua de la coccion que habiamos reservado. Integramos todos los ingredientes haciendo movimientos envolventes y dejamos que todo se cocine durante unos minutos hasta que la pasta este al dente. Finalmente, servimos en un plato y espolvoreamos con un poco de perejil picado.
-Jimenez
-Valeria
+Jimenez,Valeria
 Comida
 Nuggets de pollo
 30
-Carne de pollo
-200g
-S
-Leche
-Chorrito
-S
-Harina
-100g
-S
-Huevo
-1
-S
-Pan rallado
-100g
-N
+200g - Carne de pollo
+Chorrito - Leche
+100g - Harina
+1 - Huevo
+100g - Pan rallado
+
 Ponemos en un bol la carne picada de pollo y salpimentamos. Despues, quitamos la corteza a la rebanada de pan de mole y la anadimos al bol junto a la carne picada. Anadimos un chorro de leche. La miga y la leche, seran lo que les de esa cremosidad que queremos, al interior de la nugget de pollo. Anadimos, si lo deseamos, el queso y mezclamos todo con ayuda de la mano o una cuchara, hasta que quede todo bien integrado. Despues, se puede dejar reposar unos minutos en el frigorifico para que se compacte la masa.Ahora, con la mano, cogemos una pequena porcion de la masa, la aplastamos un poquito, dandole esa forma caracteristica de nugget y la pasamos por harina, huevo y pan rallado (por ese orden). Las freimos en abundante aceite de oliva a fuego fuerte. Retiramos y dejamos reposar durante 1 minuto en papel absorbente.
-Cazarez
-Jennifer
+Cazarez,Jennifer
 Desayuno
 Bolitas de oreo
 240
-Galletas oreo
-32
-S
-Queso Crema
-300g
-S
-Chocolate blanco
-400g
-N
+32 - Galletas oreo
+300g - Queso Crema
+400g - Chocolate blanco
+
 Trituramos las galletas, con la crema incluida. Con las manos, las rompemos un poco y las metemos en una picadora, licuadora, procesador de alimentos o el instrumento que tengas por casa para triturar alimentos. Trituramos hasta que haya quedado una especie de arenilla muy fina Ponemos la galleta en un bol bien grande y anadimos el queso tipo philadelphia. Mezclamos bien ambos ingredientes con una cuchara o un tenedor Hacemos pequenas bolitas con la masa. De una cucharada de tamano mas o menos. Que no sean demasiado grandes porque como despues hay que banarlas en chocolate, creceran un poco mas Segun vayamos terminando las bolitas, las vamos colocando en una bandeja, con papel de horno o papel vegetal, para que las bolitas no se peguen Una vez esten todas las bolitas formadas, metemos la bandeja junto con las bolitas de oreo al congelador y la dejamos ahi alrededor de una hora Pasado el tiempo, derretimos el chocolate al bano maria, o en el microondas y banamos bien en el las bolitas de oreo, una a una. Haz este paso rapidamente porque si no las bolitas se derretiran en el chocolate caliente Una vez banada cada bolita, la devolvemos al papel de horno. Y una vez hayamos terminado con todas, metemos a la nevera durante unas 3 horas mas, antes de poderse comer.
-Rodriguez
-Karla
+Rodriguez,Karla
 Navideno
 Pechugas de pollo en salsa de queso
 30
-Pechugas de pollo
-2
-S
-Cebolla
-1
-S
-Dientes de ajo
-4
-S
-Nata para cocinar
-250ml
-S
-Queso azul
-2
-N
+2 - Pechugas de pollo
+1 - Cebolla
+4 - Dientes de ajo
+250ml - Nata para cocinar
+2 - Queso azul
+
 1.- Cortamos las pechugas. Y para preparar este plato, lo hacemos en tacos de tamano de bocado. Salpimentamos 2.- En una sarten amplia, ponemos un chorrito de aceite a fuego fuerte y sellamos las pechugas en el. La idea es sellar los poros del pollo para que mantenga la mayor cantidad posible de sus jugos en el interior 3.- Pasados alrededor de 3 minutos, que el pollo haya cogido color pero, siga crudo en su interior, retiramos todos los trozos de la pechuga de la sarten 4.- En la misma sarten y, si vemos que el fondo esta muy seco, anadimos otro chorrito de aceite. Anadimos la cebolla y el ajo picados. Salpimentamos y cocinamos a fuego suave durante unos 15 minutos 5.- Pasado el tiempo, cuando ambos ingredientes esten muy blandos, pero que no hayan cogido color (por eso los cocinamos a fuego suave) anadimos la nata y el queso troceado. Mezclamos a fuego suave, el tiempo suficiente para que se integren todos los ingredientes 6.- Es el turno de anadir las pechugas de pollo. Integramos junto a la salsa de queso y dejamos cocinar a fuego suave 5 minutos mas. Es importante no remover en exceso ni calentar a fuego muy fuerte para que la nata no se corte
-Olivo
-Belinda
+Olivo,Belinda
 Navideno
 Risotto de champinones
 45
-Arroz
-200g
-S
-Cebolla
-1
-S
-Dientes de ajo
-2
-S
-Champinones 
-200g
-S
-Queso parmesano
-50g
-N
+200g - Arroz
+1 - Cebolla
+2 - Dientes de ajo
+200g - Champinones 
+50g - Queso parmesano
+
 Calentar el caldo de pollo en una olla. En una sarten grande, saltear la cebolla y el ajo en aceite de oliva hasta que esten dorados. Anadir los champinones y saltear hasta que esten tiernos. Reservar. En la misma sarten, anadir el arroz y saltearlo hasta que este dorado. Anadir el vino blanco y dejar que se evapore. Anadir el caldo de pollo caliente poco a poco, removiendo constantemente hasta que el arroz este tierno y el risotto este cremoso (aproximadamente 20-25 minutos). Anadir los champinones salteados y el queso parmesano rallado. Remover bien. Salpimentar al gusto. Servir caliente.
-Martinez
-Ana
+Martinez,Ana
 Comida
 Guacamole
 10
-Aguacates
-2
-S
-Cebolla picada
-1/4
-S
-Tomate picado
-1/2
-S
-Chile serrano
-1
-S
-Diente de ajo
-1
-N
+2 - Aguacates
+1/4 - Cebolla picada
+1/2 - Tomate picado
+1 - Chile serrano
+1 - Diente de ajo
+
 Pelar y deshuesar los aguacates. Cortar la pulpa en cubos y ponerla en un bol. Anadir la cebolla, el tomate, el chile serrano (si se usa), el ajo y el cilantro fresco picado. Anadir el zumo de limon y la sal al gusto. Machacar todo con un tenedor hasta conseguir la consistencia deseada. Servir con chips de tortilla o como acompanamiento de otros platos mexicanos.
-Garcia
-Miguel
+Garcia,Miguel
 Cena
 Pasta al pesto con camarones
 20
-Pasta
-200g
-S
-Salsa pesto
-1/2
-S
-Camarones pelados
-200g
-S
-Ajo picado
-1 diente
-N
+200g - Pasta
+1/2 - Salsa pesto
+200g - Camarones pelados
+1 diente - Ajo picado
+
 Cocer la pasta siguiendo las instrucciones del paquete. Mientras tanto, saltear el ajo picado en aceite de oliva hasta que este dorado. Anadir los camarones y saltear hasta que esten rosados.
-Perez
-Sofia
+Perez,Sofia
 Desayuno
 Huevos revueltos con espinacas y tomate
 10
-Huevos
-2
-S
-Espinacas 
-1 taza
-S
-Tomate picado
-1/2
-N
+2 - Huevos
+1 taza - Espinacas 
+1/2 - Tomate picado
+
 Calienta un poco de aceite de oliva en una sarten a fuego medio. Agrega las espinacas y el tomate a la sarten y cocinalos durante 2-3 minutos hasta que las espinacas se hayan marchitado y el tomate este suave. En un tazon aparte, bate los huevos con un tenedor hasta que esten bien mezclados. Agrega sal y pimienta al gusto. Agrega los huevos a la sarten con las espinacas y el tomate. Cocina y revuelve hasta que los huevos esten completamente cocidos. Sirve caliente y disfruta. Avena con frutas (tiempo de preparacion: 5 minutos)
-Ibanez
-Moises
-
-
+Ibanez,Moises

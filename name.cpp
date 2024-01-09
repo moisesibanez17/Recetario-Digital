@@ -57,6 +57,7 @@ bool Name::operator>=(const Name& n) const {
     return toString() >= n.toString();
 }
 
+
 ostream& operator << (ostream& os, Name& n){
     os << n.last << ',' << n.first;
 

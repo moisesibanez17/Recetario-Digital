@@ -1,5 +1,5 @@
-#ifndef ListSimple_H_INCLUDED
-#define ListSimple_H_INCLUDED
+#ifndef ListDoble_H_INCLUDED
+#define ListDoble_H_INCLUDED
 
 #include <exception>
 #include <string>
@@ -7,11 +7,12 @@
 
 ///Definicion
 template <class T>
-class ListSimple {
+class ListDoble {
     private:
         class Node {
             private:
             T data;
+            Node* prev;
             Node* next;
 
             public:
@@ -19,9 +20,11 @@ class ListSimple {
             Node(const T&);
 
             T getData() const;
+            Node* getPrev() const;
             Node* getNext() const;
 
             void setData(const T&);
+            void setPrev(Node*);
             void setNext(Node*); 
         };
 
@@ -29,7 +32,7 @@ class ListSimple {
 
         bool isValidPos(Node*) const;
 
-        void copyAll(const ListSimple<T>&);
+        void copyAll(const ListDoble<T>&);
 
     public:
         typedef Node* Position;
@@ -48,10 +51,10 @@ class ListSimple {
 
     };
 
-        ListSimple();
-        ListSimple(const ListSimple<T>&);
+        ListDoble();
+        ListDoble(const ListDoble<T>&);
 
-        ~ListSimple();
+        ~ListDoble();
 
         bool isEmpty() const;
 
@@ -68,64 +71,81 @@ class ListSimple {
         Node* findData(const T&) const;
 
         void swapData(Node*, Node*);
-        void Sort();
+        Node* partition(Node*, Node*);
+        void quickSort(Node*, Node*);
+        void quickSort();
 
         T retrieve(Node*);
 
         void readFromDisk(const std::string&);
         void writeToDisk(const std::string&);
 
+        std::string TipotoString(const T&, int cmp(const T&, const T&)) const;
         std::string toString() const;
 
         void deleteAll();
 
-        ListSimple<T>& operator = (const ListSimple<T>&);
+        ListDoble<T>& operator = (const ListDoble<T>&);
 };
 
 ///Implementacion
 
 //Nodo
 template <class T>
-ListSimple<T>::Node::Node() : next(nullptr) { }
+ListDoble<T>::Node::Node() : prev(nullptr), next(nullptr) { }
 
 template <class T>
-ListSimple<T>::Node::Node(const T& e) : data(e), next(nullptr) { }
+ListDoble<T>::Node::Node(const T& e) : data(e), prev(nullptr), next(nullptr) { }
 
 template <class T>
-T ListSimple<T>::Node::getData() const{
+T ListDoble<T>::Node::getData() const{
     return data;
 }
 
 template <class T>
-typename ListSimple<T>::Node* ListSimple<T>::Node::getNext() const{
+typename ListDoble<T>::Node* ListDoble<T>::Node::getPrev() const{
+    return prev;
+}
+
+template <class T>
+typename ListDoble<T>::Node* ListDoble<T>::Node::getNext() const{
     return next;
 }
 
 template <class T>
-void ListSimple<T>::Node::setData(const T& e){
+void ListDoble<T>::Node::setData(const T& e){
     data = e;
 }
 
 template <class T>
-void ListSimple<T>::Node::setNext(Node* p){
+void ListDoble<T>::Node::setPrev(Node* p){
+    prev = p;
+}
+
+template <class T>
+void ListDoble<T>::Node::setNext(Node* p){
     next = p;
 }
 
-//ListSimple
+//ListDoblea
 
 template <class T>
-void ListSimple<T>::copyAll(const ListSimple<T>& l){
+void ListDoble<T>::copyAll(const ListDoble<T>& l){
     Node* aux(l.anchor);
     Node* last(nullptr);
     Node* newNode;
 
     while(aux != nullptr){
-        newNode = new Node(aux->getData());
+        if((newNode = new Node(aux->getData())) == nullptr){
+            throw Exception("MEmoria no disponible, copyAll");
+        }
 
         if(last == nullptr){
             anchor = newNode;
         }
         else{
+            newNode->setPrev(last);
+
             last->setNext(newNode);
         }
 
@@ -136,7 +156,7 @@ void ListSimple<T>::copyAll(const ListSimple<T>& l){
 }
 
 template <class T>
-bool ListSimple<T>::isValidPos(Node* p) const{
+bool ListDoble<T>::isValidPos(Node* p) const{
     Node* aux(anchor);
 
     while(aux != nullptr){
@@ -151,25 +171,25 @@ bool ListSimple<T>::isValidPos(Node* p) const{
 }
 
 template <class T>
-ListSimple<T>::ListSimple() : anchor(nullptr) { }
+ListDoble<T>::ListDoble() : anchor(nullptr) { }
 
 template <class T>
-ListSimple<T>::ListSimple(const ListSimple<T>& l) : anchor(nullptr) {
+ListDoble<T>::ListDoble(const ListDoble<T>& l) : anchor(nullptr) {
     copyAll(l);
 } 
 
 template <class T>
-ListSimple<T>::~ListSimple() {
+ListDoble<T>::~ListDoble() {
     deleteAll();
 }
 
 template <class T>
-bool ListSimple<T>::isEmpty() const{
+bool ListDoble<T>::isEmpty() const{
     return anchor == nullptr;
 }
 
 template <class T>
-void ListSimple<T>::insertData(Node* p, const T& e) {
+void ListDoble<T>::insertData(Node* p, const T& e) {
     if(p != nullptr && !isValidPos(p)){
         throw Exception("Posicion invalida, insertData");
     }
@@ -182,16 +202,27 @@ void ListSimple<T>::insertData(Node* p, const T& e) {
 
     if(p == nullptr) {
         aux->setNext(anchor);
-        anchor=aux;
+        
+        if(anchor != nullptr){
+            anchor->setPrev(aux);
+        }
+
+        anchor = aux;
     }
     else{
+        aux->setPrev(p);
         aux->setNext(p->getNext());
+
+        if(p->getNext() != nullptr){
+            p->getNext()->setPrev(aux);
+        }
+
         p->setNext(aux);
     }
 }
 
-template<class T>
-void ListSimple<T>::insertSortedData(Node* p, const T& e) {
+template <class T>
+void ListDoble<T>::insertSortedData(Node* p, const T& e) {
     if(p != nullptr && !isValidPos(p)){
         throw Exception("Posicion invalida, insertData");
     }
@@ -202,48 +233,55 @@ void ListSimple<T>::insertSortedData(Node* p, const T& e) {
         throw Exception("Memoria no disponible, insertData");
     }
 
-    if(anchor == nullptr) { // caso lista vacía
-        anchor = aux;
-        aux->setNext(nullptr);
-    } else if(p == nullptr || p == anchor) { // caso insertar al inicio
+    if (isEmpty() || e < anchor->getData()) {
         aux->setNext(anchor);
-        anchor = aux;
-    } else { // caso insertar en posición intermedia o final
-        Node* prev = anchor;
-        while(prev->getNext() != p && prev->getNext() != nullptr){
-            prev = prev->getNext();
+        if(anchor != nullptr){
+            anchor->setPrev(aux);
         }
-        aux->setNext(prev->getNext());
-        prev->setNext(aux);
+        anchor = aux;
     }
-
-    Sort();
-
+    else {
+        Node* q = anchor;
+        while(q->getNext() != nullptr && q->getNext()->getData() < e) {
+            q = q->getNext();
+        }
+        aux->setPrev(q);
+        aux->setNext(q->getNext());
+        if(q->getNext() != nullptr){
+            q->getNext()->setPrev(aux);
+        }
+        q->setNext(aux);
+    }
 }
 
 template <class T>
-void ListSimple<T>::deleteData(Node* p){
+void ListDoble<T>::deleteData(Node* p){
     if(!isValidPos(p)){
         throw Exception("Posicion invalida, deleteData");
     }
 
-    if(p == anchor){
-        anchor == anchor->getNext();
+    if(p->getPrev() != nullptr){
+        p->getPrev()->setNext(p->getPrev());
     }
-    else{
-        getPrevPos(p)->setNext(p->getNext());
+
+    if(p->getNext() != nullptr){
+        p->getNext()->setPrev(p->getPrev());
+    }
+
+    if(p == anchor){
+        anchor = anchor->getNext();
     }
 
     delete p;
 }
 
 template <class T>
-typename ListSimple<T>::Node* ListSimple<T>::getFirstPos() const{
+typename ListDoble<T>::Node* ListDoble<T>::getFirstPos() const{
     return anchor;
 }
 
 template <class T>
-typename ListSimple<T>::Node* ListSimple<T>::getLastPos() const{
+typename ListDoble<T>::Node* ListDoble<T>::getLastPos() const{
     if(isEmpty()){
         return nullptr;
     }
@@ -256,21 +294,16 @@ typename ListSimple<T>::Node* ListSimple<T>::getLastPos() const{
 } 
 
 template <class T>
-typename ListSimple<T>::Node* ListSimple<T>::getPrevPos(Node* p) const {
-    if(p == anchor){
+typename ListDoble<T>::Node* ListDoble<T>::getPrevPos(Node* p) const {
+    if(!isValidPos(p)){
         return nullptr;
     }
 
-    Node* aux(anchor);
-
-    while(aux != nullptr && aux->getNext() != p){
-        aux = aux->getNext();
-        }
-    return aux;
+    return p->getPrev();
 } 
 
 template <class T>
-typename ListSimple<T>::Node* ListSimple<T>::getNextPos(Node* p) const {
+typename ListDoble<T>::Node* ListDoble<T>::getNextPos(Node* p) const {
     if(!isValidPos(p)){
         return nullptr;
     }
@@ -279,7 +312,7 @@ typename ListSimple<T>::Node* ListSimple<T>::getNextPos(Node* p) const {
 }
 
 template <class T>
-typename ListSimple<T>::Node* ListSimple<T>::findData(const T& e) const {
+typename ListDoble<T>::Node* ListDoble<T>::findData(const T& e) const {
     Node* aux(anchor);
 
     while(aux != nullptr && aux->getData() != e){
@@ -290,33 +323,45 @@ typename ListSimple<T>::Node* ListSimple<T>::findData(const T& e) const {
 }
 
 template <class T>
-void ListSimple<T>::swapData(Node* p, Node* q){
+void ListDoble<T>::swapData(Node* p, Node* q){
     T temp = p->getData();
     p->setData(q->getData());
     q->setData(temp);
 }
 
 template <class T>
-void ListSimple<T>::Sort(){
-    Node* p = anchor;
-    while (p != nullptr) {
-        Node* min = p;
-        Node* q = p->getNext();
-        while (q != nullptr) {
-            if (q->getData() < min->getData()) {
-                min = q;
-            }
-            q = q->getNext();
+typename ListDoble<T>::Node* ListDoble<T>::partition(Node* left, Node* right){
+    T pivot = right->getData();
+    Node* i = left->getPrev();
+
+    for (Node* j = left; j != right; j = j->getNext()){
+        if (j->getData() <= pivot){
+            i = (i == nullptr) ? left : i->getNext();
+            swapData(i, j);
         }
-        if (min != p) {
-            swapData(p, min);
-        }
-        p = p->getNext();
+    }
+
+    i = (i == nullptr) ? left : i->getNext();
+    swapData(i, right);
+    return i;
+}
+
+template <class T>
+void ListDoble<T>::quickSort(Node* left, Node* right){
+    if (right != nullptr && left != right && left != right->getNext()){
+        Node* pivot = partition(left, right);
+        quickSort(left, pivot->getPrev());
+        quickSort(pivot->getNext(), right);
     }
 }
 
 template <class T>
-T ListSimple<T>::retrieve(Node* p){
+void ListDoble<T>::quickSort(){
+    quickSort(getFirstPos(), getLastPos());
+}
+
+template <class T>
+T ListDoble<T>::retrieve(Node* p){
     if(!isValidPos(p)){
         throw Exception("Posicion invalida, retrieve");
     }
@@ -325,7 +370,20 @@ T ListSimple<T>::retrieve(Node* p){
 }
 
 template <class T>
-std::string ListSimple<T>::toString() const {
+std::string ListDoble<T>::TipotoString(const T& e, int cmp(const T&, const T&)) const{
+    std::string result;
+    Node* aux(anchor->getNext());
+    while(aux != anchor){
+        if(cmp(e,aux->getData()) == 0){
+            result += aux->getData().toString() + "\n";
+        }
+        aux = aux->getNext();
+    }
+    return result;
+}
+
+template <class T>
+std::string ListDoble<T>::toString() const{
     Node* aux(anchor);
     std::string result;
 
@@ -339,7 +397,7 @@ std::string ListSimple<T>::toString() const {
 }
 
 template <class T>
-void ListSimple<T>::readFromDisk(const std::string& fileName) {
+void ListDoble<T>::readFromDisk(const std::string& fileName) {
     std::ifstream myFile;
     T myData;
 
@@ -368,7 +426,7 @@ void ListSimple<T>::readFromDisk(const std::string& fileName) {
 }
 
 template <class T>
-void ListSimple<T>::writeToDisk(const std::string& fileName) {
+void ListDoble<T>::writeToDisk(const std::string& fileName) {
     std::ofstream myFile;
 
     myFile.open(fileName, std::ios_base::trunc);
@@ -378,8 +436,10 @@ void ListSimple<T>::writeToDisk(const std::string& fileName) {
     }
 
     Node* currentNode = anchor;
+    T data;
     while (currentNode != nullptr) {
-        myFile << currentNode->getData() << std::endl;
+        data = currentNode->getData();
+        myFile << data << std::endl;
         currentNode = currentNode->getNext();
     }
 
@@ -388,7 +448,7 @@ void ListSimple<T>::writeToDisk(const std::string& fileName) {
 
 
 template <class T>
-void ListSimple<T>::deleteAll() {
+void ListDoble<T>::deleteAll() {
     Node* aux;
 
     while(anchor != nullptr) {
@@ -401,7 +461,7 @@ void ListSimple<T>::deleteAll() {
 }
 
 template <class T>
-ListSimple<T>& ListSimple<T>::operator = (const ListSimple<T>& l){
+ListDoble<T>& ListDoble<T>::operator = (const ListDoble<T>& l){
     deleteAll();
 
     copyAll(l);

@@ -22,7 +22,7 @@ string Ingrediente::getNombre() const {
 }
 
 string Ingrediente::toString() const {
-    return "- " + nombre;
+    return cantidad + " - " + nombre;
 }
 
 void Ingrediente::setCantidad(const string& n){
@@ -65,7 +65,7 @@ ostream& operator << (ostream& os, Ingrediente& i){
 
 istream& operator >> (istream& is, Ingrediente& i){
 
-    getline(is,i.nombre,'-');  
+    getline(is,i.nombre);  
     getline(is,i.cantidad);
     
     return is;
